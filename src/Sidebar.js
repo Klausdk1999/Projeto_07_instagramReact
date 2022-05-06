@@ -22,7 +22,7 @@ const usuario =[{
     src:"assets/img/catanacomics.svg",
     user:"catanacomics",
     name:"Klaus"
-  }];
+}];
 
 export default function Sidebar() {
 	return (
