@@ -1,5 +1,6 @@
 import Story from './Story';
 import Post from './Post';
+
 const stories =[{
   src:"assets/img/9gag.svg",
   user:"9gag"
