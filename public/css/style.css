@@ -66,6 +66,10 @@ body {
   text-align: center;
 }
 
+.like {
+  color: red;
+}
+
 .navbar .icones ion-icon {
   margin: 0 5px;
 }

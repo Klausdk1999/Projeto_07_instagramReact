@@ -1,4 +1,27 @@
+import React from 'react';
+
 export default function Post(props){
+    
+    let outline="heart-outline";
+    const [type, setType] = React.useState(outline);
+    const [clas, setClas] = React.useState("");
+
+    function Heart(props){
+        return(
+            <ion-icon name={props.type} class={props.class} onClick={like}></ion-icon>
+        );
+    }
+
+    function like(){
+        if(type==outline){
+            setType("heart");
+            setClas("like");
+        }else{
+            setType("heart-outline");
+            setClas("");
+        }   
+    }
+
     return(
         <div class="post">
                     <div class="topo">
@@ -7,7 +30,7 @@ export default function Post(props){
                             {props.user}
                         </div>
                         <div class="acoes">
-                            <ion-icon name="ellipsis-horizontal"></ion-icon>
+                            <ion-icon  name="ellipsis-horizontal"></ion-icon>
                         </div>
                     </div>
 
@@ -18,7 +41,7 @@ export default function Post(props){
                     <div class="fundo">
                         <div class="acoes">
                         <div>
-                            <ion-icon name="heart-outline"></ion-icon>
+                            <Heart type={type} class={clas} />
                             <ion-icon name="chatbubble-outline"></ion-icon>
                             <ion-icon name="paper-plane-outline"></ion-icon>
                         </div>
