@@ -35,7 +35,7 @@ export default function Post(props){
                     </div>
 
                     <div class="conteudo">
-                        <img src={props.postimg} />
+                        <img src={props.postimg} onDoubleClick={like} />
                     </div>
 
                     <div class="fundo">
